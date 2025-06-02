@@ -1,6 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { BadgeCheck, Handshake, ShieldCheck, DollarSign } from "lucide-react";
-import { SellProduct } from "../actions";
 export default function AssistedBuyingPage() {
   return (
     <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
