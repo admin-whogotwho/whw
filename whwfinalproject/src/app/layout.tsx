@@ -6,6 +6,7 @@ import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "./api/uploadthing/core";
 import { Toaster } from "@/components/ui/sonner";
+import Script from "next/script"; // <--- ADD THIS LINE to import the Script component
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      {/* Google Tag (gtag.js) - START */}
+      {/* This Script loads the gtag.js library */}
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-NK90ZYEMS3" // Your GA4 Measurement ID
+        strategy="afterInteractive" // Recommended for analytics scripts
+      />
+      {/* This Script initializes gtag and configures your GA4 property */}
+      <Script
+        id="google-analytics" // Unique ID for this script tag
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-NK90ZYEMS3'); // Your GA4 Measurement ID
+          `,
+        }}
+      />
+      {/* Google Tag (gtag.js) - END */}
+
       <body className={inter.className}>
         <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
         <Navbar />
