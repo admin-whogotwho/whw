@@ -4,15 +4,12 @@
 export const metadata = {
   title: 'WhoGotWho | Buy & Sell Digital Assets, Online Businesses, YouTube Channels, SaaS, & More',
   description: 'WhoGotWho is India&apos;s trusted digital marketplace to buy and sell online businesses, YouTube channels, Instagram accounts, SaaS products, Amazon FBA, domains, and mobile apps with professional assistance.',
-  // You can also add relevant keywords here, though their direct impact on ranking is small:
   keywords: ['buy digital assets', 'sell digital assets', 'online marketplace India', 'buy YouTube channel', 'sell Instagram account', 'buy SaaS business', 'online business for sale', 'acquire online assets'],
-  // Open Graph tags are important for how your site appears when shared on social media:
   openGraph: {
     title: 'WhoGotWho: India&apos;s Digital Marketplace',
     description: 'Buy and Sell Online Businesses, YouTube Channels, Instagram Accounts, SaaS, and more securely with professional assistance.',
     url: 'https://www.whogotwho.com',
     type: 'website',
-    // You might want to add an image for social sharing if you have one:
     // images: ['https://www.whogotwho.com/og-image.jpg'],
   },
 };
@@ -25,31 +22,24 @@ export default function Home() {
   return (
     <section className="w-full relative">
 
-      {/* Right Side - French */}
-      <p className="hidden lg:block absolute z-50 right-8 top-[35%] px-4 py-2 bg-white text-gray-800 text-base font-medium shadow-md rounded-md border border-gray-300">
-        Le Marché Numérique de l&apos;Inde - Avez-vous vérifié votre valeur nette 2.0 sur <span className="font-semibold italic">Who Got Who?</span> ?
+      {/* Repositioned Language Snippets */}
+      <p className="absolute right-8 top-[20%] z-50 px-4 py-2 bg-white text-gray-800 text-sm font-medium shadow-md rounded-md border border-gray-300 hidden lg:block">
+        &quot;Achetez et Vendez des Actifs Numériques&quot; (Français)
       </p>
-
-      {/* Right Side - Spanish */}
-      <p className="hidden lg:block absolute z-50 right-8 top-[55%] px-4 py-2 bg-white text-gray-800 text-base font-medium shadow-md rounded-md border border-gray-300">
-        El Mercado Digital de India - Has revisado tu patrimonio neto 2.0 en <span className="font-semibold italic">Who Got Who?</span>?
+      <p className="absolute right-8 top-[40%] z-50 px-4 py-2 bg-white text-gray-800 text-sm font-medium shadow-md rounded-md border border-gray-300 hidden lg:block">
+        &quot;Comprar y Vender Activos Digitales&quot; (Español)
       </p>
-
-      {/* Left Side - Marathi */}
-      <p className="hidden lg:block absolute z-50 left-8 top-[35%] px-4 py-2 bg-white text-gray-800 text-base font-medium shadow-md rounded-md border border-gray-300">
-        भारताचे डिजिटल मार्केटप्लेस - तुम्ही Who Got Who वर तुमची नेट वर्थ 2.0 तपासली का?
+      <p className="absolute left-8 top-[20%] z-50 px-4 py-2 bg-white text-gray-800 text-sm font-medium shadow-md rounded-md border border-gray-300 hidden lg:block">
+        &quot;डिजिटल मालमत्ता खरेदी आणि विक्री करा&quot; (मराठी)
       </p>
-
-      {/* Left Side - Gujarati */}
-      <p className="hidden lg:block absolute z-50 left-8 top-[55%] px-4 py-2 bg-white text-gray-800 text-base font-medium shadow-md rounded-md border border-gray-300">
-        ભારતનું ડિજિટલ માર્કેટપ્લેસ - તમે Who Got Who પર તમારી નેટ વર્થ 2.0 चेक કરી??
+      <p className="absolute left-8 top-[40%] z-50 px-4 py-2 bg-white text-gray-800 text-sm font-medium shadow-md rounded-md border border-gray-300 hidden lg:block">
+        &quot;ડિજિટલ સંપત્તિઓ ખરીદો અને વેચો&quot; (ગુજરાતી)
       </p>
 
       {/* Hero Section */}
       <div className="relative w-full overflow-hidden bg-gradient-to-br from-[#f5f7fa] to-[#e2e8f0] py-20 md:py-32 flex justify-center items-center min-h-[600px]">
         <div className="text-center max-w-4xl px-4 z-10">
           <div className="space-y-4 mb-6">
-            {/* Corrected apostrophe here for "India's" */}
             <p className="text-lg sm:text-xl font-medium text-muted-foreground">
               &quot;India&apos;s Digital Marketplace - Have You Checked Your Net Worth 2.0 on{" "}
               <span className="text-primary font-semibold">Who Got Who?</span>&quot;
@@ -67,10 +57,9 @@ export default function Home() {
           </h1>
           {/* --- END OPTIMIZED H1 HEADING --- */}
 
-          {/* --- START OPTIMIZED INTRODUCTORY PARAGRAPH --- */}
-          {/* Corrected apostrophe here for "India's" */}
+          {/* --- START OPTIMIZED INTRODUCTORY PARAGRAPH (NEW TAGLINE) --- */}
           <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-            From **Amazon storefronts** and **SaaS startups** to **YouTube channels**, **Instagram accounts**, and **established websites**, WhoGotWho is India&apos;s trusted platform to safely explore, evaluate, and acquire online assets. Find your next **digital business for sale** or connect with buyers for your **online ventures**.
+            Your ultimate marketplace to **buy and sell profitable online businesses, YouTube channels, Instagram accounts, SaaS products, Amazon FBA stores, domains, and mobile apps**. WhoGotWho simplifies **digital asset acquisition** across India.
           </p>
           {/* --- END OPTIMIZED INTRODUCTORY PARAGRAPH --- */}
         </div>
