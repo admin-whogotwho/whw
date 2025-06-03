@@ -15,10 +15,43 @@ export const metadata = {
 };
 // --- END SEO METADATA ---
 
-
 import { ProductRow } from "./components/ProductRow";
+// CORRECTED IMPORT PATH for ProductSearchBar based on your provided location
+import { ProductSearchBar } from './components/ProductSearchBar';
+
+// Define the Product interface here or import from a shared types file
+interface Product {
+  id: string;
+  images: string[];
+  smallDescription: string;
+  name: string;
+  price: number;
+  category: string;
+}
 
 export default function Home() {
+  // --- IMPORTANT: REPLACE THIS DUMMY DATA WITH YOUR ACTUAL PRODUCTS ---
+  // You will typically fetch this data from an API or database.
+  // Example:
+  // const [products, setProducts] = useState<Product[]>([]);
+  // useEffect(() => {
+  //   fetch('/api/products') // Your API endpoint
+  //     .then(res => res.json())
+  //     .then(data => setProducts(data));
+  // }, []);
+
+  const products: Product[] = [
+    { id: '1', name: 'Premium SaaS App', smallDescription: 'A robust SaaS platform for project management.', price: 15000, category: 'saas', images: ['https://placehold.co/400x300/E0F2F7/000000?text=SaaS+App'] },
+    { id: '2', name: 'High-Engagement Instagram', smallDescription: 'Instagram account with 50K followers in niche.', price: 2500, category: 'instagram', images: ['https://placehold.co/400x300/FCE4EC/000000?text=Instagram+Account'] },
+    { id: '3', name: 'Monetized YouTube Channel', smallDescription: 'YouTube channel with 100K subs, cooking niche.', price: 8000, category: 'youtube', images: ['https://placehold.co/400x300/FFF3E0/000000?text=YouTube+Channel'] },
+    { id: '4', name: 'Established E-commerce Website', smallDescription: 'Dropshipping store with consistent sales.', price: 12000, category: 'websites', images: ['https://placehold.co/400x300/E8F5E9/000000?text=E-commerce+Site'] },
+    { id: '5', name: 'Niche Blog Website', smallDescription: 'Blog focused on sustainable living, good traffic.', price: 3000, category: 'websites', images: ['https://placehold.co/400x300/F3E5F5/000000?text=Niche+Blog'] },
+    { id: '6', name: 'Gaming Mobile App', smallDescription: 'Puzzle game with active user base.', price: 7000, category: 'mobileapps', images: ['https://placehold.co/400x300/E1F5FE/000000?text=Mobile+App'] },
+    { id: '7', name: 'Active Reddit Community', smallDescription: 'Reddit subreddit with 20K active members.', price: 1800, category: 'reddit', images: ['https://placehold.co/400x300/FFEBEE/000000?text=Reddit+Community'] },
+    { id: '8', name: 'Premium Domain Name', smallDescription: 'Short, memorable domain for tech startup.', price: 5000, category: 'domains', images: ['https://placehold.co/400x300/E0F7FA/000000?text=Domain+Name'] },
+  ];
+  // --- END OF DUMMY DATA ---
+
   return (
     <section className="w-full relative">
 
@@ -62,6 +95,13 @@ export default function Home() {
             Your ultimate marketplace to **buy and sell profitable online businesses, YouTube channels, Instagram accounts, SaaS products, Amazon FBA stores, domains, and mobile apps**. WhoGotWho simplifies **digital asset acquisition** across India.
           </p>
           {/* --- END OPTIMIZED INTRODUCTORY PARAGRAPH --- */}
+
+          {/* --- START ProductSearchBar INTEGRATION --- */}
+          <div className="mt-12 w-full max-w-2xl mx-auto"> {/* Added container for search bar */}
+            <ProductSearchBar products={products} />
+          </div>
+          {/* --- END ProductSearchBar INTEGRATION --- */}
+
         </div>
 
         {/* Design elements */}
@@ -69,7 +109,11 @@ export default function Home() {
         <div className="absolute bottom-[-100px] right-[-100px] h-[300px] w-[300px] bg-muted/30 rounded-full blur-2xl" />
       </div>
 
-      {/* Product Rows */}
+      {/* Product Rows (Can be kept or removed depending on your design choice) */}
+      {/* If you want the search bar to show the products directly on the homepage,
+          you might consider removing these ProductRow components or modifying them
+          to display the filtered results from the search bar.
+          For now, I'm leaving them as is, but be aware of potential redundancy. */}
       <div className="max-w-7xl mx-auto px-4 md:px-8 mt-36 space-y-20">
         <ProductRow category="newest" />
         <ProductRow category="amazon" />
