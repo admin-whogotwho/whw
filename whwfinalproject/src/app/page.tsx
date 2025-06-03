@@ -5,16 +5,16 @@ export const metadata = {
   title: 'WhoGotWho | Buy & Sell Digital Assets, Online Businesses, YouTube Channels, SaaS, & More',
   description: 'WhoGotWho is India&apos;s trusted digital marketplace to buy and sell online businesses, YouTube channels, Instagram accounts, SaaS products, Amazon FBA, domains, and mobile apps with professional assistance.',
   // You can also add relevant keywords here, though their direct impact on ranking is small:
-  // keywords: ['buy digital assets', 'sell digital assets', 'online marketplace India', 'buy YouTube channel', 'sell Instagram account', 'buy SaaS business', 'online business for sale', 'acquire online assets'],
+  keywords: ['buy digital assets', 'sell digital assets', 'online marketplace India', 'buy YouTube channel', 'sell Instagram account', 'buy SaaS business', 'online business for sale', 'acquire online assets'],
   // Open Graph tags are important for how your site appears when shared on social media:
-  // openGraph: {
-  //   title: 'WhoGotWho: India\'s Digital Marketplace',
-  //   description: 'Buy and Sell Online Businesses, YouTube Channels, Instagram Accounts, SaaS, and more securely with professional assistance.',
-  //   url: 'https://www.whogotwho.com',
-  //   type: 'website',
-  //   // You might want to add an image for social sharing if you have one:
-  //   // images: ['https://www.whogotwho.com/og-image.jpg'],
-  // },
+  openGraph: {
+    title: 'WhoGotWho: India&apos;s Digital Marketplace', // CORRECTED: Changed 'India's' to 'India&apos;s'
+    description: 'Buy and Sell Online Businesses, YouTube Channels, Instagram Accounts, SaaS, and more securely with professional assistance.',
+    url: 'https://www.whogotwho.com',
+    type: 'website',
+    // You might want to add an image for social sharing if you have one:
+    // images: ['https://www.whogotwho.com/og-image.jpg'],
+  },
 };
 // --- END SEO METADATA ---
 
