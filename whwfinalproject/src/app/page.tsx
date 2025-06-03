@@ -1,3 +1,24 @@
+// app/page.tsx (or app/page.js)
+
+// --- START SEO METADATA ---
+export const metadata = {
+  title: 'WhoGotWho | Buy & Sell Digital Assets, Online Businesses, YouTube Channels, SaaS, & More',
+  description: 'WhoGotWho is India\'s trusted digital marketplace to buy and sell online businesses, YouTube channels, Instagram accounts, SaaS products, Amazon FBA, domains, and mobile apps with professional assistance.',
+  // You can also add relevant keywords here, though their direct impact on ranking is small:
+  // keywords: ['buy digital assets', 'sell digital assets', 'online marketplace India', 'buy YouTube channel', 'sell Instagram account', 'buy SaaS business', 'online business for sale', 'acquire online assets'],
+  // Open Graph tags are important for how your site appears when shared on social media:
+  // openGraph: {
+  //   title: 'WhoGotWho: India\'s Digital Marketplace',
+  //   description: 'Buy and Sell Online Businesses, YouTube Channels, Instagram Accounts, SaaS, and more securely with professional assistance.',
+  //   url: 'https://www.whogotwho.com',
+  //   type: 'website',
+  //   // You might want to add an image for social sharing if you have one:
+  //   // images: ['https://www.whogotwho.com/og-image.jpg'],
+  // },
+};
+// --- END SEO METADATA ---
+
+
 import { ProductRow } from "./components/ProductRow";
 
 export default function Home() {
@@ -21,7 +42,7 @@ export default function Home() {
 
       {/* Left Side - Gujarati: Removed rotate-270, origin-left, translate-x, translate-y. Adjusted top for placement below Marathi. */}
       <p className="hidden lg:block absolute z-50 left-8 top-[55%] px-4 py-2 bg-white text-gray-800 text-base font-medium shadow-md rounded-md border border-gray-300">
-        ભારતનું ડિજિટલ માર્કેટપ્લેસ - તમે Who Got Who પર તમારી નેટ વર્થ 2.0 ચેક કરી??
+        भारतનું ડિજિટલ માર્કેટપ્લેસ - તમે Who Got Who પર તમારી નેટ વર્થ 2.0 ચેક કરી??
       </p>
 
       {/* Hero Section */}
@@ -38,14 +59,18 @@ export default function Home() {
             </p>
           </div>
 
+          {/* --- START OPTIMIZED H1 HEADING --- */}
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-gray-900">
-            Buy & Sell Digital Products <br />
+            Buy & Sell Digital Assets & Online Businesses <br />
             <span className="text-primary">with Professional Assistance</span>
           </h1>
+          {/* --- END OPTIMIZED H1 HEADING --- */}
 
+          {/* --- START OPTIMIZED INTRODUCTORY PARAGRAPH --- */}
           <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-            From Amazon storefronts to SaaS startups, Who Got Who is your trusted platform to safely explore, evaluate, and acquire online assets.
+            From **Amazon storefronts** and **SaaS startups** to **YouTube channels**, **Instagram accounts**, and **established websites**, WhoGotWho is India's trusted platform to safely explore, evaluate, and acquire online assets. Find your next **digital business for sale** or connect with buyers for your **online ventures**.
           </p>
+          {/* --- END OPTIMIZED INTRODUCTORY PARAGRAPH --- */}
         </div>
 
         {/* Design elements */}
