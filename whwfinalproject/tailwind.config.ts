@@ -10,16 +10,14 @@ const config = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
 
-    // === Add these specific paths exactly as suggested by the warning ===
-    './node_modules/@uploadthing/react/dist**', // EXACTLY as warned
-    './node_modules/uploadthing/dist**',       // Add for the core package as well
-    // ==================================================================
-
-    // You can keep the more robust globs below this if you wish,
-    // but the above exact paths are what the warning is asking for.
-    // They generally shouldn't conflict.
-    "./node_modules/@uploadthing/react/dist/**/*",
-    "./node_modules/uploadthing/dist/**/*",
+    // === CORRECTED UploadThing Paths ===
+    // Use standard glob patterns to include all JS/TS/JSX/TSX files
+    // within the 'dist' folders of uploadthing packages.
+    './node_modules/@uploadthing/react/dist/**/*.{js,ts,jsx,tsx}',
+    './node_modules/uploadthing/dist/**/*.{js,ts,jsx,tsx}',
+    // If you are using @uploadthing/ui components, also add this:
+    './node_modules/@uploadthing/ui/dist/**/*.{js,ts,jsx,tsx}',
+    // ===================================
   ],
   prefix: "",
   theme: {
