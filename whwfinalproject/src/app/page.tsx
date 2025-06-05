@@ -47,7 +47,7 @@ export default function Home() {
     { id: '4', name: 'Established E-commerce Website', smallDescription: 'Dropshipping store with consistent sales.', price: 12000, category: 'websites', images: ['https://placehold.co/400x300/E8F5E9/000000?text=E-commerce+Site'] },
     { id: '5', name: 'Niche Blog Website', smallDescription: 'Blog focused on sustainable living, good traffic.', price: 3000, category: 'websites', images: ['https://placehold.co/400x300/F3E5F5/000000?text=Niche+Blog'] },
     { id: '6', name: 'Gaming Mobile App', smallDescription: 'Puzzle game with active user base.', price: 7000, category: 'mobileapps', images: ['https://placehold.co/400x300/E1F5FE/000000?text=Mobile+App'] },
-    { id: '7', name: 'Active Reddit Community', smallDescription: 'Reddit subreddit with 20K active members.', price: 1800, category: 'reddit', images: ['https://placehold.co/400x300/FFEBEE/000000?text=Reddit+Community'] },
+    { id: '7', 'name': 'Active Reddit Community', smallDescription: 'Reddit subreddit with 20K active members.', price: 1800, category: 'reddit', images: ['https://placehold.co/400x300/FFEBEE/000000?text=Reddit+Community'] },
     { id: '8', name: 'Premium Domain Name', smallDescription: 'Short, memorable domain for tech startup.', price: 5000, category: 'domains', images: ['https://placehold.co/400x300/E0F7FA/000000?text=Domain+Name'] },
   ];
   // --- END OF DUMMY DATA ---
@@ -55,22 +55,33 @@ export default function Home() {
   return (
     <section className="w-full relative">
 
-      {/* Repositioned Language Snippets */}
-      <p className="absolute right-8 top-[20%] z-50 px-4 py-2 bg-white text-gray-800 text-sm font-medium shadow-md rounded-md border border-gray-300 hidden lg:block">
+      {/* NEW: Search Bar above all other content */}
+      {/* This div makes the search bar full width, white background, and gives it padding/shadow */}
+      <div className="w-full bg-white py-6 px-4 md:px-8 shadow-md relative z-30">
+        {/* This inner div centers the search bar and limits its max width */}
+        <div className="max-w-4xl mx-auto">
+          <ProductSearchBar products={products} />
+        </div>
+      </div>
+
+      {/* Modified Language Snippets */}
+      {/* Positioned fixed so they don't scroll, z-50 to ensure they are on top */}
+      {/* Adjusted top values, added shadow, border, and attractive font styling */}
+      <p className="fixed right-8 top-[100px] z-50 px-4 py-2 bg-white text-gray-800 text-sm font-semibold shadow-lg rounded-lg border border-gray-200" style={{ fontFamily: 'Georgia, serif', color: '#4A5568' }}>
         &quot;Achetez et Vendez des Actifs Numériques&quot; (Français)
       </p>
-      <p className="absolute right-8 top-[40%] z-50 px-4 py-2 bg-white text-gray-800 text-sm font-medium shadow-md rounded-md border border-gray-300 hidden lg:block">
+      <p className="fixed right-8 top-[160px] z-50 px-4 py-2 bg-white text-gray-800 text-sm font-semibold shadow-lg rounded-lg border border-gray-200" style={{ fontFamily: 'Georgia, serif', color: '#4A5568' }}>
         &quot;Comprar y Vender Activos Digitales&quot; (Español)
       </p>
-      <p className="absolute left-8 top-[20%] z-50 px-4 py-2 bg-white text-gray-800 text-sm font-medium shadow-md rounded-md border border-gray-300 hidden lg:block">
+      <p className="fixed left-8 top-[100px] z-50 px-4 py-2 bg-white text-gray-800 text-sm font-semibold shadow-lg rounded-lg border border-gray-200" style={{ fontFamily: 'Georgia, serif', color: '#4A5568' }}>
         &quot;डिजिटल मालमत्ता खरेदी आणि विक्री करा&quot; (मराठी)
       </p>
-      <p className="absolute left-8 top-[40%] z-50 px-4 py-2 bg-white text-gray-800 text-sm font-medium shadow-md rounded-md border border-gray-300 hidden lg:block">
+      <p className="fixed left-8 top-[160px] z-50 px-4 py-2 bg-white text-gray-800 text-sm font-semibold shadow-lg rounded-lg border border-gray-200" style={{ fontFamily: 'Georgia, serif', color: '#4A5568' }}>
         &quot;ડિજિટલ સંપત્તિઓ ખરીદો અને વેચો&quot; (ગુજરાતી)
       </p>
 
-      {/* Hero Section */}
-      <div className="relative w-full overflow-hidden bg-gradient-to-br from-[#f5f7fa] to-[#e2e8f0] py-20 md:py-32 flex justify-center items-center min-h-[600px]">
+      {/* Hero Section - Adjusted top margin (mt-20) to push it down below the new search bar */}
+      <div className="relative w-full overflow-hidden bg-gradient-to-br from-[#f5f7fa] to-[#e2e8f0] py-20 md:py-32 flex justify-center items-center min-h-[600px] mt-20">
         <div className="text-center max-w-4xl px-4 z-10">
           <div className="space-y-4 mb-6">
             <p className="text-lg sm:text-xl font-medium text-muted-foreground">
@@ -96,12 +107,7 @@ export default function Home() {
           </p>
           {/* --- END OPTIMIZED INTRODUCTORY PARAGRAPH --- */}
 
-          {/* --- START ProductSearchBar INTEGRATION --- */}
-          <div className="mt-12 w-full max-w-2xl mx-auto"> {/* Added container for search bar */}
-            <ProductSearchBar products={products} />
-          </div>
-          {/* --- END ProductSearchBar INTEGRATION --- */}
-
+          {/* ProductSearchBar was previously here, now moved to the very top */}
         </div>
 
         {/* Design elements */}
@@ -110,10 +116,6 @@ export default function Home() {
       </div>
 
       {/* Product Rows (Can be kept or removed depending on your design choice) */}
-      {/* If you want the search bar to show the products directly on the homepage,
-          you might consider removing these ProductRow components or modifying them
-          to display the filtered results from the search bar.
-          For now, I'm leaving them as is, but be aware of potential redundancy. */}
       <div className="max-w-7xl mx-auto px-4 md:px-8 mt-36 space-y-20">
         <ProductRow category="newest" />
         <ProductRow category="amazon" />
