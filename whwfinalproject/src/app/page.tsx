@@ -80,9 +80,9 @@ export default function Home() {
         &quot;ડિજિટલ સંપત્તિઓ ખરીદો અને વેચો&quot; (ગુજરાતી)
       </p>
 
-      {/* Hero Section - Adjusted top margin (mt-20) to push it down below the new search bar */}
-      <div className="relative w-full overflow-hidden bg-gradient-to-br from-[#f5f7fa] to-[#e2e8f0] py-20 md:py-32 flex justify-center items-center min-h-[600px] mt-20">
-        <div className="text-center max-w-4xl px-4 z-10">
+     {/* Hero Section */}
+<div className="relative w-full overflow-hidden bg-gradient-to-br from-[#f5f7fa] to-[#e2e8f0] py-20 md:py-32 flex justify-center items-center min-h-[600px] mt-4">
+  <div className="text-center max-w-4xl px-4 z-10">
           <div className="space-y-4 mb-6">
             <p className="text-lg sm:text-xl font-medium text-muted-foreground">
               &quot;India&apos;s Digital Marketplace - Have You Checked Your Net Worth 2.0 on{" "}
