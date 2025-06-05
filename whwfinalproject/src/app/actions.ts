@@ -256,11 +256,11 @@ export async function sendInterestEmail({
 //     success_url:
 //       process.env.NODE_ENV === "development"
 //         ? "http://localhost:3000/payment/success"
-//         : "https://marshal-ui-yt.vercel.app/payment/success",
+//        `${process.env.NEXT_PUBLIC_SITE_URL}/payment/success`
 //     cancel_url:
 //       process.env.NODE_ENV === "development"
 //         ? "http://localhost:3000/payment/cancel"
-//         : "https://marshal-ui-yt.vercel.app/payment/cancel",
+//         `${process.env.NEXT_PUBLIC_SITE_URL}/payment/cancel`
 //   });
 
 //   return redirect(session.url as string);
